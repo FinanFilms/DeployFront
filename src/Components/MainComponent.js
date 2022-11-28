@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types"
+
 import Card from "./cardUsuario"
 import Tabla from "./TablaMovimientos"
 import Carro from "./Carro"
@@ -12,13 +12,13 @@ import Confirmar from "./Confirmar";
 import Olvido from "./CambiarPassword";
 import {AuthProvider} from "../context/AuthProvider.jsx";
 import {ItemsProvider} from "../context/DataProvider.jsx";
-import { UsuariosProvider } from "../context/UsuariosProvider.jsx";
+
 
 import {Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 
 function Main(){
-
     
+
     return (
         
         
@@ -28,8 +28,8 @@ function Main(){
             
             
             <BrowserRouter>
-           <AuthProvider>
             <ItemsProvider>
+           <AuthProvider>
             <Routes>
                 
                     <Route path="/sign_up/home/" element={<Sign/>}/>
@@ -37,15 +37,16 @@ function Main(){
                     <Route path="/Admin/home/Productos" element={<AdminProd/>}></Route>
                     <Route path="/Admin/home/Detalles" element={<Detalles/>}></Route>
                     <Route path="/Admin/home/Ventas" element={<Tabla/>}></Route >
-                    <Route path="/User/home/Carrito" element={<Carro/>}></Route >
+                    <Route path="/User/home/Carrito"   element={<Carro/>}></Route >
                     <Route path="/User/home/Productos" element={<Productos/>}></Route >
                     <Route path="/loggin/home/Contraseña" element={<Olvido/>}/>
                     <Route path="/loggin/home/" element={<Logger/>}/>
                         <Route path="*" element={ <Navigate to="/loggin/home/" replace={true} />} />
                 
             </Routes>
-            </ItemsProvider>
+            
             </AuthProvider>
+            </ItemsProvider>
             </BrowserRouter>
            
                  </container>

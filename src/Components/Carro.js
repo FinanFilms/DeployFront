@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Articulo from "../Bin/marihuana.png"
 import useItems from "../hooks/useItems.jsx"
 
 const Carro= () => {
     const value= useItems();
-    const menu = value.menu
-    const setMenu = value.setMenu();
+    
     const carrito = value.carrito;
     const setCarrito = value.setCarrito;
     const total = value.total;
@@ -37,20 +36,10 @@ const Carro= () => {
       }
       
         
-    const removeProducto = id =>{
-        if(window.confirm("¿Quieres suspender el producto?")){
-            carrito.forEach((item, index)=>{
-        if( item.id=== id){
-            item.cantidad = 1;
-            carrito.splice(index, 1)
-            
-        }
-            })
-        setCarrito([...carrito])
-    }
+    
     
 
-    }
+    
     
 
    

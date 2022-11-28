@@ -2,8 +2,6 @@ import React from "react";
 import tendero from "../Bin/limpiador.png";
 import tiendaColor from "../Bin/Mi_tienda.png";
 
-
-import { useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 
 

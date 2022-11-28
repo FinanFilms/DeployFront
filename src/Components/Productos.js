@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from "react";
+import React  from "react";
 import useItems from "../hooks/useItems.jsx"
 
 
@@ -12,7 +12,7 @@ function Productos(){
     const artCarro=totalFetch.Productos
     
     
-    const [ cartItems, setCarItems]=useState([]);
+    
     
       
     return(
