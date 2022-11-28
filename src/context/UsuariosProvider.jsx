@@ -65,7 +65,7 @@ const UsuariosProvider = ({ children }) => {
     };
 
     const eliminarUsuario = async (id) => {
-        const confirmar = confirm('¿Confirmas que deseas eliminar?');
+        const confirmar = window.confirm('¿Confirmas que deseas eliminar?');
         if (confirmar) {
             try {
                 const token = localStorage.getItem('token');
