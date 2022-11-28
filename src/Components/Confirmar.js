@@ -16,6 +16,7 @@ const Confirmar = () => {
     useEffect(() => {
         const confirmarCuenta = async () => {
             try {
+                
                 const url = `/login/home/confirmar/${token}`;
                 const { data } = await clienteAxios(url);
                 //const { data } = await clienteAxios( `/usuarios/prueba`);
@@ -32,6 +33,7 @@ const Confirmar = () => {
             setCargando(false);
         };
         confirmarCuenta();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     
