@@ -6,7 +6,7 @@ const ItemsProvider = ({ children }) => {
 
   const [Productos, setProductos]=useState([])
   const[menu, setMenu] = useState(false)
-  const [item, setItem] = useState({});
+  
   const [carrito, setCarrito] = useState(localStorage.getItem('dataCarrito') ? JSON.parse(localStorage.getItem('dataCarrito')) : []);
   const [total, setTotal] = useState(0);
 
