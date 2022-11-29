@@ -38,10 +38,10 @@ const Logger= () => {
             setAuth(data);
             if(data.usuario.rol === "admin"){
               navigate('/Admin/home/Productos');
-              window.location.reload(true)
+              
             }else{
               navigate('/User/home/Productos');
-              window.location.reload(true)
+              
             }
             
         } catch (error) {
